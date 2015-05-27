@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Google Authenticator</title>
+        <script type="text/javascript">
+        function show_qrcode() {
+            var author = document.getElementById('author').value;
+            var email = document.getElementById('email').value;
+            var url = '/qrcode?author=' + author + "&email=" + email;
+            document.getElementById('img').innerHTML='<img src="' + url + '" alt="">';
+            document.getElementsByTagName('form')[0].style="display:block;";
+        }
+        </script>
+    </head>
+    <body>
+        <p><label for="author">用户名：</label><input type="text" name="author" id="author"></p>
+        <p><label for="email">邮件：</label><input type="text" name="email" id="email"></p>
+        <p><button onclick="show_qrcode()">显示</button></p>
+        <p id="img"></p>
+        <form action="/verify" method="post" style="display:none;">
+            <p><input type="text" name="code" id=""></p>
+            <p><input type="submit" value="验证"></p>
+        </form>
+    </body>
+</html>

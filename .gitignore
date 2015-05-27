@@ -55,3 +55,14 @@ docs/_build/
 
 # PyBuilder
 target/
+
+# sublime
+*.sublime-project
+*.sublime-workspace
+*.png
+share/
+data/
+Include/
+Scripts/
+db.*
+pip-selfcheck.json
