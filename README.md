@@ -1,2 +1,2 @@
 # google_auth
-google authentication server
+这是一个google 两步验证 二维码生成和验证测试例子
